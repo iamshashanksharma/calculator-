@@ -1,0 +1,43 @@
+.container{
+    display:flex;
+    width:100%;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+    height:400px;
+    width:300px;
+    background-color: black;
+    display:flex;
+    flex-direction:column;
+}
+.first-row{
+    height: 60px;
+    display:flex;
+    
+}
+.second-row{
+    height:60px;
+    display:flex;
+}
+.third-row{
+    height:60px;
+    display:flex;
+}
+.fourth-row{
+    height:60px;
+    display:flex;
+}
+.fifth-row{
+    height:60px;
+    display:flex;
+}
+.screen{
+    height: 100px;
+    display:flex;
+}
+button{
+    flex:1;
+}
