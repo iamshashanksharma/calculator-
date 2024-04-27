@@ -22,7 +22,6 @@ function tokenize(expression) {
     for (let i = 0; i < expression.length; i++) {
         let char = expression[i];
 
-        // If the character is an operator or a parenthesis
         if (isOperator(char)) {
             if (currentToken !== '') {
                 tokens.push(currentToken);
@@ -30,7 +29,6 @@ function tokenize(expression) {
             }
             tokens.push(char);
         } else if (!isNaN(parseInt(char)) || char === '.') {
-            // If the character is a digit or a dot
             currentToken += char;
         }
     }
@@ -89,10 +87,10 @@ function evaluatePostfix(postfixTokens) {
         let token = postfixTokens[i];
 
         if (!isNaN(parseFloat(token))) {
-            // If the token is a number, push it to the operand stack
+            
             operandStack.push(parseFloat(token));
         } else if (isOperator(token)) {
-            // If the token is an operator, pop operands from the stack, perform the operation, and push the result back
+            
             let operand2 = operandStack.pop();
             let operand1 = operandStack.pop();
 
